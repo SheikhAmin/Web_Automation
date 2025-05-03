@@ -61,15 +61,14 @@ public class LoginTest {
 
         //obj.clickContinue();
     }
-    /*
+
     void testLogin(){
         LoginPage lp = new LoginPage(driver);
         lp.setUserName("Amin_Faular");
         lp.setEmailAddress("email1942@gmail.com");
         lp.clickSignUp();
-
     }
- */
+
     @AfterClass
     void tearDown(){
         driver.quit();
