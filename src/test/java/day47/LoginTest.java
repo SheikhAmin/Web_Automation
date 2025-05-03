@@ -1,6 +1,7 @@
 package day47;
 
 import Pom.LoginPage;
+import Pom.SignUp;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -20,6 +21,32 @@ public class LoginTest {
     }
 
     @Test
+    void testSignUp(){
+        SignUp obj = new SignUp(driver);
+        obj.setName("Sheikh Amin");
+        obj.setEmailAddress("sheikamin.ael-b@gmail.com");
+        obj.clickSignUp();
+        obj.setGender();
+        obj.setPassword("amin");
+        obj.setDay("7");
+        obj.setMonth("June");
+        obj.setYear("1999");
+        obj.clickNewsLetter();
+        obj.clickOffer();
+        obj.setFirstName("Sheikh");
+        obj.setLastName("Amin");
+        obj.setCompany("Dhaka Bank");
+        obj.setAddress("244 East Nakhalpara Tejgaon, Dhaka-1215");
+        obj.setAddress2("244 East Nakhalpara Tejgaon, Dhaka-1215");
+        obj.setCountry("Canada");
+        obj.setCity("Dhaka");
+        obj.setState("Dhaka");
+        obj.setZipCode("1215");
+        obj.setMobileNum("01521255651");
+        obj.clickCreateAccount();
+        obj.clickContinue();
+    }
+    /*
     void testLogin(){
         LoginPage lp = new LoginPage(driver);
         lp.setUserName("Amin_Faular");
@@ -32,4 +59,6 @@ public class LoginTest {
     void tearDown(){
         driver.quit();
     }
+
+     */
 }
